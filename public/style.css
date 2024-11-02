@@ -1,0 +1,346 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+.page {
+    background-color: white;
+}
+
+.page-personalisation{
+    background-color: #06402b;
+}
+#app {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 400px;
+    max-height: 800px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 5px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 400px;
+    max-height: 800px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 5px solid black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%; /* Reduced padding for a tighter layout */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Full width to reduce whitespace */
+    max-width: 300px;
+    margin-bottom: 10px; /* Reduced space between blocks */
+    padding: 0;
+}
+
+.block h2 {
+    margin: 5px 0;
+    color: #ADD8E6;
+    padding-bottom: 5px;
+}
+
+
+.item-content{
+    padding: 5px;
+}
+
+
+/* Input Field Styling */
+#nameInput {
+    width: 100%; /* Full width for the input field */
+    max-width: 250px;
+    padding: 6px; /* Reduced padding inside the input */
+    border: none; /* No border around the input */
+    border-bottom: 1px solid #98a869; /* Optional underline */
+    margin-bottom: 10px; /* Closer spacing between input and button */
+    background-color:transparent; /* Transparent background for clean look */
+    font-size: 16px;
+    color: #ADD8E6
+
+}
+
+/* Button Styling */
+.button.button-fill-ios {
+    width: 50%;
+    max-width: 200px;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ADD8E6;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #98a869; /* Custom color for navbar */
+    border-bottom: 2px solid #333; /* Optional border for separation */
+}
+
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures title is centered, logo on the right */
+}
+
+.title {
+    text-align: center; /* Ensures the title text is centered */
+    font-family: "SF Pro Display", "Roboto", "Helvetica Neue", "Inter", "Avenir Next", Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 24px; /* Adjust size as needed */
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #333;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 65px; /* Adjust the logo size as needed */
+    max-width: 65px;
+    margin-right: 10px; /* Add spacing from the edge if needed */
+}
+
+
+
+/* Avatar stuff*/
+.avatar-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*padding: 10px;*/
+}
+
+.avatar-option {
+    width: 35%;
+    margin-bottom: 10px;
+
+}
+
+.avatar-option img {
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid #98a869; 
+    transition: border-color 0.3s; 
+}
+
+
+.avatar-option img.selected {
+    border-radius: 70%;
+    border-color:#FFD700; /* Framework7 primary blue color */
+}
+
+/* Navbar for second/third etc pages*/
+
+.navbar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-left: 5px;
+    border: 1px solid #06402b;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#userName {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#balanceCreditInfo {
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+
+/*Page 2 Stuff */ 
+#balanceCreditInfoStage2 {
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#userNameStage2 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/*Page 3 Stuff */ 
+#balanceCreditInfoStage3 {
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#userNameStage3 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CHAT BOX */
+
+#chatbox {
+    position: absolute;
+    bottom: -300px;
+    left: calc(50% + 70px);
+    translate: -50% 0;
+    transition: bottom 500ms ease-in-out;
+}
+#chatbox.open {
+    bottom: 0;
+}
+
+#chatbox-toggle {
+    cursor: pointer;
+    height: 20px;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+#chatbox-content {
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#chatbox-messages {
+    overflow-x: hidden;
+    flex-grow: 1;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chatbox-message {
+    /* background-color: #00a8e0; */
+    background-color: #98a869;
+    border-radius: 6px;
+    padding: 4px;
+    width: 120px;
+    align-self: flex-end;
+}
+.chatbox-message.bot {
+    align-self: flex-start;
+    background-color: #999;
+}
+
+#chatbox-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chatbox-text {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: inherit;
+    width: 135px;
+    height: 18px;
+}
+
+#chatbox-send {
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+    width: 30px;
+}
+
+/* DECISIONS */
+
+.decision {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.decision-text {
+
+}
+
+.decision-option {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}

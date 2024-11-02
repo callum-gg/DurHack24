@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7/framework7-bundle.min.css">
+    <title>Personalise Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="hangman.js" defer></script>
+    <script src="chatbot.js" defer></script>
+    <script src="https://kit.fontawesome.com/b49eb3e0bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="view view-main">
+            <!-- Personalization Page -->
+            <div class="page page-personalisation" id="personalisationPage">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="title"><h2>CREDITWISE</h2></div>
+                        <div class="right">
+                            <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="block">
+                        <h2>Choose Your Character:</h2>
+                        <div class="avatar-selection">
+                            <div class="avatar-option" onclick="selectAvatar(1)">
+                                <img src="img/Mii1.jpg" alt="Avatar 1" id="avatar1">
+                            </div>
+                            <div class="avatar-option" onclick="selectAvatar(2)">
+                                <img src="img/Mii2.jpg" alt="Avatar 2" id="avatar2">
+                            </div>
+                            <div class="avatar-option" onclick="selectAvatar(3)">
+                                <img src="img/Mii3.jpg" alt="Avatar 3" id="avatar3">
+                            </div>
+                            <div class="avatar-option" onclick="selectAvatar(4)">
+                                <img src="img/Mii4.jpg" alt="Avatar 4" id="avatar4">
+                            </div>
+                            <div class="avatar-option" onclick="selectAvatar(5)">
+                                <img src="img/Mii5.jpg" alt="Avatar 5" id="avatar5">
+                            </div>
+                            <div class="avatar-option" onclick="selectAvatar(6)">
+                                <img src="img/Mii6.jpg" alt="Avatar 6" id="avatar6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <h2>Enter your name:</h2>
+                        <div class="name-input-section">
+                            <input type="text" style="color:#ADD8E6" placeholder="Your name" id="nameInput">
+                        </div>
+                        <button class="button button-fill-ios" onclick="saveProfile()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage1 Page -->
+            <div class="page" id="stage1Page" style="display: none;">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- Left side: avatar image and name -->
+                        <div class="left" id="avatarInfo">
+                            <img id="selectedAvatarImg" class="navbar-avatar" src="" alt="Avatar">
+                            <span id="userName"></span>
+                        </div>
+
+
+                        <!-- Right side: credit card image and credit info-->
+                        <div class="right">
+                            <div id="balanceCreditInfo">
+                                <p>Balance: <span id="balanceAmount"></span></p>
+                                <p>Credit Score: <span id="creditScore"></span></p>
+                            </div>
+                            <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <h3> Level 1</h3>
+                    <!-- This will be where the content of the game goes-->
+                    <button class="button button-fill-ios" onclick= "showStage2Page()">Next Level</button>
+                </div>
+            </div>
+
+           <!-- Stage2 Page---------------------------------------------- -->
+            <div class="page" id="stage2Page" style="display: none;">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- Left side: avatar image and name -->
+                        <div class="left" id="avatarInfoStage2">
+                            <img id="selectedAvatarImgStage2" class="navbar-avatar" src="" alt="Avatar">
+                            <span id="userNameStage2" class></span>
+                        </div>
+
+                        <!-- Right side: credit card image and credit info -->
+                        <div class="right">
+                            <div id="balanceCreditInfoStage2">
+                                <p>Balance: <span id="balanceAmountStage2"></span></p>
+                                <p>Credit Score: <span id="creditScoreStage2"></span></p>
+                            </div>
+                            <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <h3> Level 2</h3>
+                    <!-- This will be where the content of the game goes-->
+                    <button class="button button-fill-ios" onclick= "showStage3Page()">Next Level</button>
+                </div>
+            </div>
+
+            <!-- Stage3 Page---------------------------------------------- -->
+            <div class="page" id="stage3Page" style="display: none;">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- Left side: avatar image and name -->
+                    <div class="left" id="avatarInfoStage3">
+                        <img id="selectedAvatarImgStage3" class="navbar-avatar" src="" alt="Avatar">
+                        <span id="userNameStage3" class></span>
+                    </div>
+
+                    <!-- Right side: credit card image and credit info -->
+                    <div class="right">
+                        <div id="balanceCreditInfoStage3">
+                            <p>Balance: <span id="balanceAmountStage3"></span></p>
+                            <p>Credit Score: <span id="creditScoreStage3"></span></p>
+                        </div>
+                        <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <h3> Level 3</h3>
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div id="chatbox">
+        <div id="chatbox-toggle"><i class="fa-solid fa-comments-dollar"></i></div>
+        <div id="chatbox-content">
+            <div id="chatbox-messages"></div>
+            <div id="chatbox-input">
+                <input id="chatbox-text">
+                <button onclick="SendMessage()" id="chatbox-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/framework7/framework7-bundle.min.js"></script>
+    <script src="louisa.js"></script>
+</body>
+</html>

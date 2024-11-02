@@ -1,19 +1,20 @@
 [
     [
         {
+            "questionID": "q1",
             "Question": "You receive your first credit card bill. Do you want to pay in full, pay the minimum, or make a partial payment?",
             "Answers": {
-                "Pay in full" : {
+                "a1": {
                     "Text": "Make the whole payment right now.",
                     "Balance increment": -500,
                     "Credit score increment": 15
                 },
-                "Pay minimum" : {
+                "a2": {
                     "Text": "Make only the minimum payment required.",
                     "Balance increment": -50,
                     "Credit score increment": 2
                 },
-                "Partial Payment": {
+                "a3": {
                     "Text": "Make a partial payment that's less than the minimum.",
                     "Balance increment": 25, 
                     "Credit score increment": -5
@@ -21,14 +22,15 @@
             }
         },
         {
+            "questionID": "q2",
             "Question": "You see an item you want on sale but don't have enough saved. Do you charge it to your card?",
             "Answers": {
-                "Yes" : {
+                "a4": {
                     "Text": "Charge the item to your credit card.",
                     "Balance increment": 100,
                     "Credit score increment": -3
                 },
-                "No" : {
+                "a5": {
                     "Text": "Skip buying the item for now.",
                     "Balance increment": 0,
                     "Credit score increment": 3
@@ -36,14 +38,15 @@
             }
         },
         {
+            "questionID": "q3",
             "Question": "You receive a credit limit increase offer. Do you accept it?",
             "Answers": {
-                "Accept" : {
+                "a6": {
                     "Text": "Accept the offer to increase your credit limit.",
                     "Balance increment": 0,
                     "Credit score increment": 8
                 },
-                "Decline" : {
+                "a7": {
                     "Text": "Decline the offer and keep your current limit.",
                     "Balance increment": 0,
                     "Credit score increment": 0
@@ -51,14 +54,15 @@
             }
         },
         {
+            "questionID": "q4",
             "Question": "You're invited to a rewards program challenge: Spend $500 on travel for bonus points. Do you accept?",
             "Answers": {
-                "Accept" : {
+                "a8": {
                     "Text": "Take the challenge and spend $500 for bonus rewards points.",
                     "Balance increment": 500,
                     "Credit score increment": -3
                 },
-                "Decline" : {
+                "a9": {
                     "Text": "Skip the challenge and avoid the additional spending.",
                     "Balance increment": 0,
                     "Credit score increment": 5
@@ -68,19 +72,20 @@
     ],
     [
         {
+            "questionID": "q5",
             "Question": "You're faced with an emergency expense (car repair, medical bill, etc.). Do you use your credit card, dip into savings, or set up a payment plan?",
             "Answers": {
-                "Use Credit Card" : {
+                "a10": {
                     "Text": "Cover the expense by charging it to your credit card.",
                     "Balance increment": 500,
                     "Credit score increment": 10
                 },
-                "Use Savings" : {
+                "a11": {
                     "Text": "Pay for the expense using your savings.",
                     "Balance increment": -50,
                     "Credit score increment": 2
                 },
-                "Set Up Payment Plan": {
+                "a12": {
                     "Text": "Arrange a payment plan to cover the expense over time.",
                     "Balance increment": 25, 
                     "Credit score increment": -10
@@ -88,19 +93,20 @@
             }
         },
         {
+            "questionID": "q6",
             "Question": "You get a promotion and raise at work. Do you increase your monthly payments, build savings, or splurge on something new?",
             "Answers": {
-                "Increase Payments" : {
+                "a13": {
                     "Text": "Use the extra income to increase your monthly credit payments.",
                     "Balance increment": -100,
                     "Credit score increment": 5
                 },
-                "Build Savings" : {
+                "a14": {
                     "Text": "Save the extra income for future expenses.",
                     "Balance increment": 0,
                     "Credit score increment": 3
                 },
-                "Splurge" : {
+                "a15": {
                     "Text": "Spend the extra income on something special for yourself.",
                     "Balance increment": 75,
                     "Credit score increment": 0
@@ -108,14 +114,15 @@
             }
         },
         {
+            "questionID": "q7",
             "Question": "You're offered a balance transfer option with a 0% intro rate for 12 months. Do you transfer your balance?",
             "Answers": {
-                "Accept" : {
+                "a16": {
                     "Text": "Transfer your balance to take advantage of the lower interest rate.",
                     "Balance increment": 0,
                     "Credit score increment": 8
                 },
-                "Decline" : {
+                "a17": {
                     "Text": "Stick with your current credit card and interest rate.",
                     "Balance increment": 0,
                     "Credit score increment": 0
@@ -123,14 +130,15 @@
             }
         },
         {
+            "questionID": "q8",
             "Question": "A bank offers you a new, premium rewards card with better perks. Do you apply for it?",
             "Answers": {
-                "Apply" : {
+                "a18": {
                     "Text": "Apply for the new rewards card.",
                     "Balance increment": 0,
                     "Credit score increment": 8
                 },
-                "Don't Apply" : {
+                "a19": {
                     "Text": "Keep your current credit card setup.",
                     "Balance increment": 0,
                     "Credit score increment": 0
@@ -140,14 +148,15 @@
     ],
     [
         {
+            "questionID": "q9",
             "Question": "You've found your dream home! Do you choose a fixed-rate mortgage or an adjustable-rate mortgage (ARM)?",
             "Answers": {
-                "Fixed-rate mortgage" : {
+                "a20": {
                     "Text": "Choose a fixed-rate mortgage for stable payments.",
                     "Balance increment": -500,
                     "Credit score increment": 15
                 },
-                "Adjustable-Rate Mortgage (ARM)" : {
+                "a21": {
                     "Text": "Choose an adjustable-rate mortgage (ARM) with variable payments.",
                     "Balance increment": -100,
                     "Credit score increment": 7
@@ -155,19 +164,20 @@
             }
         },
         {
+            "questionID": "q10",
             "Question": "You're deciding how much to put down as a down payment. Do you go for the traditional 20%, a smaller 5%, or a larger 30% down payment?",
             "Answers": {
-                "20% Down Payment" : {
+                "a22": {
                     "Text": "Make a traditional 20% down payment.",
                     "Balance increment": -100,
                     "Credit score increment": 10
                 },
-                "5% Down Payment" : {
+                "a23": {
                     "Text": "Make a smaller, 5% down payment.",
                     "Balance increment": 0,
                     "Credit score increment": 4
                 },
-                "30% Down Payment" : {
+                "a24": {
                     "Text": "Make a larger 30% down payment for reduced debt.",
                     "Balance increment": -200,
                     "Credit score increment": 12
@@ -175,14 +185,15 @@
             }
         },
         {
+            "questionID": "q11",
             "Question": "You receive an offer to refinance your mortgage at a lower interest rate. Do you proceed with the refinance or stay with your current mortgage?",
             "Answers": {
-                "Refinance" : {
+                "a25": {
                     "Text": "Refinance your mortgage to secure a lower interest rate.",
                     "Balance increment": 0,
                     "Credit score increment": 8
                 },
-                "Stay with Current Mortgage" : {
+                "a26": {
                     "Text": "Stay with your current mortgage terms.",
                     "Balance increment": 0,
                     "Credit score increment": 0
