@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Initialize balance and credit score if they don’t already exist
             if (!localStorage.getItem('balance')) {
-                localStorage.setItem('balance', '0');
+                localStorage.setItem('balance', '500');
             }
             if (!localStorage.getItem('creditScore')) {
                 localStorage.setItem('creditScore', '0');
