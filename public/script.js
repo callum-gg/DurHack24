@@ -21,8 +21,8 @@ function CreateDecision(question_id) {
                         button.className = "decision-option";
                         button.addEventListener("click", () => {
                             addQuestionToTree(answer_id, `q${question_id + 1}`);
-                            let bal = String(Number(localStorage.getItem('balance', '0')) + answer['Balance increment']);
-                            let credit = String(Number(localStorage.getItem('creditScore', '0')) + answer['Credit score increment']);
+                            let bal = String(Number(localStorage.getItem('balance')) + answer['Balance increment']);
+                            let credit = String(Number(localStorage.getItem('creditScore')) + answer['Credit score increment']);
                             localStorage.setItem('balance', bal);
                             localStorage.setItem('creditScore', credit);
                             document.getElementById('balanceAmount').textContent = `£${bal}`;
