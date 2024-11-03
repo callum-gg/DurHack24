@@ -55,10 +55,10 @@
         },
         {
             "questionID": "q4",
-            "Question": "You're invited to a rewards program challenge: Spend $500 on travel for bonus points. Do you accept?",
+            "Question": "You're invited to a rewards program challenge: Spend £500 on travel for bonus points. Do you accept?",
             "Answers": {
                 "a8": {
-                    "Text": "Take the challenge and spend $500 for bonus rewards points.",
+                    "Text": "Take the challenge and spend £500 for bonus rewards points.",
                     "Balance increment": 500,
                     "Credit score increment": -3
                 },
