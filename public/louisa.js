@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name
-        document.getElementById('selectedAvatarImg').src = `img/Mii${avatar}.jpg`;
+        document.getElementById('selectedAvatarImg').src = `img/Mii£{avatar}.jpg`;
         document.getElementById('userName').textContent = name;
 
         // Update balance and credit score
-        document.getElementById('balanceAmount').textContent = `£${balance}`;
+        document.getElementById('balanceAmount').textContent = `££{balance}`;
         document.getElementById('creditScore').textContent = creditScore;
     }
 
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name for Stage 2
-        document.getElementById('selectedAvatarImgStage2').src = `img/Mii${avatar}.jpg`;
+        document.getElementById('selectedAvatarImgStage2').src = `img/Mii£{avatar}.jpg`;
         document.getElementById('userNameStage2').textContent = name;
 
         // Update balance and credit score for Stage 2
-        document.getElementById('balanceAmountStage2').textContent = `£${balance}`;
+        document.getElementById('balanceAmountStage2').textContent = `££{balance}`;
         document.getElementById('creditScoreStage2').textContent = creditScore;
     }
 
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name for Stage 3
-        document.getElementById('selectedAvatarImgStage3').src = `img/Mii${avatar}.jpg`;
+        document.getElementById('selectedAvatarImgStage3').src = `img/Mii£{avatar}.jpg`;
         document.getElementById('userNameStage3').textContent = name;
 
         // Update balance and credit score for Stage 3
-        document.getElementById('balanceAmountStage3').textContent = `£${balance}`;
+        document.getElementById('balanceAmountStage3').textContent = `££{balance}`;
         document.getElementById('creditScoreStage3').textContent = creditScore;
     }
 
@@ -150,7 +150,7 @@ function displayInstructionsStage1(){
 // Update content within #welcomeMessage
 welcomeMessageDiv.innerHTML = `
     <h2>The rules </h2>
-    <p> Starting with a credit balance of $500 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let’s see how you handle your newfound financial responsibility!</p>
+    <p> Starting with a credit balance of £500 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let’s see how you handle your newfound financial responsibility!</p>
     <p> If you ever have any questions, please use the button on the bottom right corner to ask our chat-bot any questions. Good luck!</p>
     <button class="button button-fill-ios" onclick="startStage1()">Start </button>
 `;
