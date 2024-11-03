@@ -45,7 +45,7 @@ class Hangman {
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "+20 credit score!";
-                let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
+                let creditScore = String(Number(localStorage.getItem('creditScore', '0') + 20));
                 localStorage.setItem('creditScore', creditScore);
                 // Wait for 5 seconds, then show Stage 2 page
                 setTimeout(showStage2Page, 5000);
