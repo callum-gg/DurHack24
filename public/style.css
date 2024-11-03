@@ -419,6 +419,7 @@ button {
     right: 5px;
     top: 5px;
     background: transparent;
+    cursor: pointer;
 }
 
 #chatbox-content {
