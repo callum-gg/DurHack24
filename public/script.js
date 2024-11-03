@@ -38,11 +38,9 @@ function CreateDecision(question_id) {
                                         break;
                                     case 1:
                                         startStage2b();
-                                        console.log("2 hehe");
                                         break;
                                     case 2:
-                                        showStage3Page();
-                                        console.log("3 hehe");
+                                        document.getElementById("root").style.display = 'block';
                                         break;
                                 }
                             }
