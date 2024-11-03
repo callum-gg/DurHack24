@@ -400,12 +400,12 @@ button {
 }
 
 /* CHAT BOX */
-
+/* Main Chatbox Styling */
 #chatbox {
     position: absolute;
     bottom: -300px;
     left: calc(50% + 70px);
-    translate: -50% 0;
+    transform: translateX(-50%);
     transition: bottom 500ms ease-in-out;
     z-index: 9999;
 }
@@ -413,38 +413,50 @@ button {
     bottom: 0;
 }
 
-#chatbox-close {
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border: none;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background: transparent;
-    cursor: pointer;
-}
-
+/* Chatbox Content Styling */
 #chatbox-content {
     height: 300px;
-    width: 200px;
-    background-color: white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 250px;
+    background-color: #ADD8E6; /* Light blue background */
+    border: 2px solid #1f2f54; /* Dark blue border */
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    padding: 15px;
+    padding-top:15%;
     box-sizing: border-box;
-    border: 1px solid black;
+    position: relative; /* Allows positioning of the close button within */
 }
 
+/* Close Button Styling */
+#chatbox-close {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: 2px solid #1f2f54; /* Dark blue border for visibility */
+    border-radius: 6px; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff; /* White background for better contrast */
+    color: #1f2f54; /* Dark blue icon color */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    z-index: 10000; /* Ensure close button appears on top */
+}
+
+/* Close Button Hover Effect */
+#chatbox-close:hover {
+    background-color: #b9feff /* Light gray on hover */
+}
+
+/* Chatbox Messages Area */
 #chatbox-messages {
-    overflow-x: hidden;
+    overflow-y: auto;
     flex-grow: 1;
     border-radius: 4px;
     padding: 10px;
@@ -453,19 +465,22 @@ button {
     gap: 5px;
 }
 
+/* Message Styling */
 .chatbox-message {
-    /* background-color: #00a8e0; */
-    background-color: #98a869;
+    background-color: #1f2f54; /* Dark blue for user message background */
+    color: white;
     border-radius: 6px;
-    padding: 4px;
-    width: 120px;
+    padding: 6px;
+    max-width: 80%; /* Limits width to fit within the chatbox */
     align-self: flex-end;
 }
 .chatbox-message.bot {
     align-self: flex-start;
-    background-color: #999;
+    background-color: blue; /* Different color for bot messages */
+    color: white;
 }
 
+/* Input Section Styling */
 #chatbox-input {
     display: flex;
     gap: 10px;
@@ -475,19 +490,25 @@ button {
 
 #chatbox-text {
     outline: none;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 1px solid #1f2f54;
+    border-radius: 5px;
     font-size: inherit;
-    width: 135px;
-    height: 18px;
+    width: 200px;
+    padding: 4px; /* Adds padding for comfortable typing */
+    box-sizing: border-box;
 }
 
 #chatbox-send {
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 1px solid #1f2f54;
+    border-radius: 5px;
     outline: none;
-    background: transparent;
+    background: white;
     width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* DECISIONS */
