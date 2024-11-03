@@ -56,4 +56,5 @@ function CreateDecision(question_id) {
     .catch(error => console.error('Error fetching the questions:', error));
 }
 
+
 CreateDecision(1);

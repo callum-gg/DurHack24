@@ -9,6 +9,7 @@ class Hangman {
         // Set the container to be the stage1hangman div
         this.container = document.getElementById("stage1hangman");
         this.container.style.display = "block"; // Make sure it's visible
+        this.container.classList.add('fade-in');
 
         // Clear any previous content inside the container
         this.container.innerHTML = "";
@@ -74,6 +75,7 @@ class ImageHangman {
         // Set the container to be the stage2hangman div
         this.container = document.getElementById("stage2hangman");
         this.container.style.display = "block"; // Make sure it's visible
+        this.container.classList.add('fade-in');
 
         // Clear any previous content inside the container
         this.container.innerHTML = "";

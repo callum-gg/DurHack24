@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showStage1Page() {
         document.getElementById('personalisationPage').style.display = 'none';
         document.getElementById('stage1Page').style.display = 'block';
+        document.getElementById('stage1Page').classList.add('fade-in');
 
         // Load profile details from localStorage
         const name = localStorage.getItem('profileName');
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('personalisationPage').style.display = 'none';
         document.getElementById('stage1Page').style.display = 'none';
         document.getElementById('stage2Page').style.display = 'block';
+        document.getElementById('stage2Page').classList.add('fade-in');
 
         // Load profile details from localStorage
         const name = localStorage.getItem('profileName');
@@ -80,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('stage1Page').style.display = 'none';
         document.getElementById('stage2Page').style.display = 'none';
         document.getElementById('stage3Page').style.display = 'block';
+        document.getElementById('stage3Page').classList.add('fade-in');
 
         // Load profile details from localStorage
         const name = localStorage.getItem('profileName');
@@ -100,7 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showPersonalisationPage() {
         document.getElementById('personalisationPage').style.display = 'block';
+        document.getElementById('personalisationPage').classList.add('fade-in');
         document.getElementById('stage1Page').style.display = 'none';
+        
     }
 
     // Clear profile data and reset to personalisation page on refresh
@@ -157,6 +162,7 @@ welcomeMessageDiv.innerHTML = `
 function startStage1(){
     document.getElementById('welcome-box').style.display = 'none';
      document.getElementById('stage1questions').style.display = 'block';
+     document.getElementById('stage1questions').classList.add('fade-in');
 
 }
 
@@ -180,12 +186,14 @@ function startStage1b(){
     hangman = hangmans[Math.floor(Math.random() * 3)];
     document.getElementById('stage1questions').style.display = 'none';
     document.getElementById('stage1hangman').style.display = 'block';
+    document.getElementById('stage1hangman').classList.add('fade-in');
 
 }
 
 function startStage2(){
     document.getElementById('welcome-box2').style.display = 'none';
     document.getElementById('stage2questions').style.display = 'block';
+    document.getElementById('stage2questions').classList.add('fade-in');
 
 }
 
@@ -209,6 +217,7 @@ function startStage2b(){
     hangman = hangmans[Math.floor(Math.random() * 3)];
     document.getElementById('stage2questions').style.display = 'none';
     document.getElementById('stage2hangman').style.display = 'block';
+    document.getElementById('stage2hangman').classList.add('fade-in');
 
 }
 
@@ -248,11 +257,13 @@ function displayInstructionsStage3(){
  function startStage3(){
      document.getElementById('welcome-box3').style.display = 'none';
      document.getElementById('stage3questions').style.display = 'block';
+     document.getElementById('stage3questions').classList.add('fade-in');
 
  }
 
  function HelpButtonFunction() {
     document.getElementById('helpPage').style.display = 'block';
+    document.getElementById('helpPage').classList.add('fade-in');
 }
 
 function closeHelpPage() {

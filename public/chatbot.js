@@ -33,3 +33,4 @@ document.getElementById("chatbox-text").addEventListener("keydown", (event) => {
         SendMessage();
     }
 });
+
