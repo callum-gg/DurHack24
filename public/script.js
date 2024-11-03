@@ -20,8 +20,13 @@ function CreateDecision(question_id) {
                         button.innerText = answer.Text;
                         button.className = "decision-option";
                         button.addEventListener("click", () => {
-                            // TODO: integrate with flow chart
-                            // TODO: update credit score, money, etc.
+                            addQuestionToTree(answer_id, `q${question_id + 1}`);
+                            let bal = String(Number(localStorage.getItem('balance', '0')) + answer['Balance increment']);
+                            let credit = String(Number(localStorage.getItem('creditScore', '0')) + answer['Credit score increment']);
+                            localStorage.setItem('balance', bal);
+                            localStorage.setItem('creditScore', credit);
+                            document.getElementById('balanceAmount').textContent = `£${bal}`;
+                            document.getElementById('creditScore').textContent = credit;
                             document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
                             CreateDecision(question_id + 1);
                             if (index === data[stage].length - 1) {
@@ -31,6 +36,9 @@ function CreateDecision(question_id) {
                                         break;
                                     case 1:
                                         showStage3Page();
+                                        break;
+                                    case 2:
+                                        document.getElementById("root").style.display = 'block';
                                 }
                             }
                         });
