@@ -58,44 +58,44 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showStage2Page() {
-    document.getElementById('personalisationPage').style.display = 'none';
-    document.getElementById('stage1Page').style.display = 'none';
-    document.getElementById('stage2Page').style.display = 'block';
+        document.getElementById('personalisationPage').style.display = 'none';
+        document.getElementById('stage1Page').style.display = 'none';
+        document.getElementById('stage2Page').style.display = 'block';
 
-    // Load profile details from localStorage
-    const name = localStorage.getItem('profileName');
-    const avatar = localStorage.getItem('profileAvatar');
-    const balance = localStorage.getItem('balance');
-    const creditScore = localStorage.getItem('creditScore');
+        // Load profile details from localStorage
+        const name = localStorage.getItem('profileName');
+        const avatar = localStorage.getItem('profileAvatar');
+        const balance = localStorage.getItem('balance');
+        const creditScore = localStorage.getItem('creditScore');
 
-    // Update avatar image and name for Stage 2
-    document.getElementById('selectedAvatarImgStage2').src = `img/Mii${avatar}.jpg`;
-    document.getElementById('userNameStage2').textContent = name;
+        // Update avatar image and name for Stage 2
+        document.getElementById('selectedAvatarImgStage2').src = `img/Mii${avatar}.jpg`;
+        document.getElementById('userNameStage2').textContent = name;
 
-    // Update balance and credit score for Stage 2
-    document.getElementById('balanceAmountStage2').textContent = `£${balance}`;
-    document.getElementById('creditScoreStage2').textContent = creditScore;
+        // Update balance and credit score for Stage 2
+        document.getElementById('balanceAmountStage2').textContent = `£${balance}`;
+        document.getElementById('creditScoreStage2').textContent = creditScore;
     }
 
     function showStage3Page() {
-    document.getElementById('personalisationPage').style.display = 'none';
-    document.getElementById('stage1Page').style.display = 'none';
-    document.getElementById('stage2Page').style.display = 'none';
-    document.getElementById('stage3Page').style.display = 'block';
+        document.getElementById('personalisationPage').style.display = 'none';
+        document.getElementById('stage1Page').style.display = 'none';
+        document.getElementById('stage2Page').style.display = 'none';
+        document.getElementById('stage3Page').style.display = 'block';
 
-    // Load profile details from localStorage
-    const name = localStorage.getItem('profileName');
-    const avatar = localStorage.getItem('profileAvatar');
-    const balance = localStorage.getItem('balance');
-    const creditScore = localStorage.getItem('creditScore');
+        // Load profile details from localStorage
+        const name = localStorage.getItem('profileName');
+        const avatar = localStorage.getItem('profileAvatar');
+        const balance = localStorage.getItem('balance');
+        const creditScore = localStorage.getItem('creditScore');
 
-    // Update avatar image and name for Stage 3
-    document.getElementById('selectedAvatarImgStage3').src = `img/Mii${avatar}.jpg`;
-    document.getElementById('userNameStage3').textContent = name;
+        // Update avatar image and name for Stage 3
+        document.getElementById('selectedAvatarImgStage3').src = `img/Mii${avatar}.jpg`;
+        document.getElementById('userNameStage3').textContent = name;
 
-    // Update balance and credit score for Stage 3
-    document.getElementById('balanceAmountStage3').textContent = `£${balance}`;
-    document.getElementById('creditScoreStage3').textContent = creditScore;
+        // Update balance and credit score for Stage 3
+        document.getElementById('balanceAmountStage3').textContent = `£${balance}`;
+        document.getElementById('creditScoreStage3').textContent = creditScore;
     }
 
 
