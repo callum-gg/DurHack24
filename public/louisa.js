@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('balance', '500');
             }
             if (!localStorage.getItem('creditScore')) {
-                localStorage.setItem('creditScore', '0');
+                localStorage.setItem('creditScore', '200');
             }
 
             document.getElementById('userNameMessage').innerText = name;

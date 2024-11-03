@@ -44,7 +44,7 @@ class Hangman {
     
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
-                this.hintElement.innerText = "You won!";
+                this.hintElement.innerText = "+20 credit score!";
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
                 localStorage.setItem('creditScore', creditScore);
                 // Wait for 5 seconds, then show Stage 2 page
@@ -55,7 +55,7 @@ class Hangman {
                 this.hangmanImg.src = `img/hangman-${this.mistakes}.svg`;
                 this.mistakes++;
             } else {
-                this.hintElement.innerText = "You lost!";
+                this.hintElement.innerText = "Unlucky, you didn't guess the word!";
                 this.wordElement.innerText = this.word;
     
                 // Wait for 5 seconds, then start Stage 2
@@ -112,7 +112,7 @@ class ImageHangman {
     
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
-                this.hintElement.innerText = "You won!";
+                this.hintElement.innerText = "+20 Credit Score";
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
                 localStorage.setItem('creditScore', creditScore);
                 
@@ -124,7 +124,7 @@ class ImageHangman {
                 this.hangmanImg.src = `img/hangman-${this.mistakes}.svg`;
                 this.mistakes++;
             } else {
-                this.hintElement.innerText = "You lost!";
+                this.hintElement.innerText = "Unlucky, you didn't guess the word.";
                 this.wordElement.innerText = this.word;
     
                 // Wait for 5 seconds, then start Stage 3
