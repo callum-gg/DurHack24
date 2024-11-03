@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
             app.dialog.alert('Please select an avatar and enter a name.');
         }
     }
-
-
     
 
     function showStage1Page() {
@@ -156,15 +154,61 @@ welcomeMessageDiv.innerHTML = `
 `;
 }
 
- function startStage1(){
-     document.getElementById('welcome-box').style.display = 'none';
+function startStage1(){
+    document.getElementById('welcome-box').style.display = 'none';
      document.getElementById('stage1questions').style.display = 'block';
+
+}
+
+function startStage1b(){
+    const hangman1 = new Hangman(
+        "Credit",
+        "The opposite of debit, this type of card allows you to borrow money to make purchases.",
+        "It's what you signed up for at the beginning of this game!"
+    );
+    const hangman2 = new Hangman(
+        "Minimum",
+        "This term describes paying the same amount every month to reduce a loan or credit card balance.",
+        "It's the smallest amount you're required to pay each month."
+    ); 
+    const hangman3 = new Hangman(
+        "Grace Period",
+        "What refers to a period when no interest is charged on purchases, provided you pay off your balance before the due date?",
+        "This period helps you avoid interest charges on purchases."
+    );
+    hangmans = [hangman1, hangman2, hangman3]
+    hangman = hangmans[Math.floor(Math.random() * 3)];
+    document.getElementById('stage1questions').style.display = 'none';
+    document.getElementById('stage1hangman').style.display = 'block';
 
 }
 
 function startStage2(){
     document.getElementById('welcome-box2').style.display = 'none';
     document.getElementById('stage2questions').style.display = 'block';
+
+}
+
+function startStage1b(){
+    const hangman1 = new Hangman(
+        "Credit score",
+        "img/hangman2-2.png",
+        "Influences your loan approvals and interest rates."
+    );
+    const hangman2 = new Hangman(
+        "Savings",
+        "img/hangman2-3.png",
+        "Money set aside for future use."
+    ); 
+    const hangman3 = new Hangman(
+        "Digital banking",
+        "img/hangman2-1.png",
+        "Makes banking easier and more convenient."
+    );
+    hangmans = [hangman1, hangman2, hangman3]
+    hangman = hangmans[Math.floor(Math.random() * 3)];
+    document.getElementById('stage1questions').style.display = 'none';
+    document.getElementById('stage1hangman').style.display = 'block';
 
 }
 
