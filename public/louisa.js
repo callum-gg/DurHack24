@@ -118,3 +118,97 @@ document.addEventListener('DOMContentLoaded', function () {
     window.showStage2Page = showStage2Page;
     window.showStage3Page = showStage3Page;
 })
+
+function displayMoreContentStage1() {
+    // Check if #welcomeMessage exists
+    const welcomeMessageDiv = document.querySelector('#welcomeMessage');
+    if (!welcomeMessageDiv) {
+        console.error('welcomeMessage div not found');
+        return;
+}
+
+// Update content within #welcomeMessage
+welcomeMessageDiv.innerHTML = `
+    <h2>Understanding Your Credit Card</h2>
+    <p><strong>Balance:</strong> The amount of money you owe on your credit card.</p>
+    <p><strong>Credit Score:</strong> A numerical value that indicates your creditworthiness based on credit history.</p>
+    <p><strong>Interest Rate:</strong> The percentage of interest charged if you carry a balance from month to month.</p>
+    <button class="button button-fill-ios" onclick="displayInstructionsStage1()">Next</button>
+`;
+}
+
+function displayInstructionsStage1(){
+    // Check if #welcomeMessage exists
+    const welcomeMessageDiv = document.querySelector('#welcomeMessage');
+    if (!welcomeMessageDiv) {
+        console.error('welcomeMessage div not found');
+        return;
+}
+
+// Update content within #welcomeMessage
+welcomeMessageDiv.innerHTML = `
+    <h2>The rules </h2>
+    <p> Starting with a credit balance of $0 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let’s see how you handle your newfound financial responsibility!</p>
+    <p> If you ever have any questions, please use the button on the bottom right corner to ask our chat-bot any questions. Good luck!</p>
+    <button class="button button-fill-ios" onclick="startStage1()">Start </button>
+`;
+}
+
+ function startStage1(){
+     document.getElementById('welcome-box').style.display = 'none';
+     document.getElementById('stage1questions').style.display = 'block';
+
+}
+
+function startStage2(){
+    document.getElementById('welcome-box2').style.display = 'none';
+    document.getElementById('stage2questions').style.display = 'block';
+
+}
+
+function displayMoreContentStage3() {
+    // Check if #welcomeMessage exists
+    const welcomeMessageDiv = document.querySelector('#welcomeMessage3');
+    if (!welcomeMessageDiv) {
+        console.error('welcomeMessage div not found');
+        return;
+}
+
+// Update content within #welcomeMessage
+welcomeMessageDiv.innerHTML = `
+    <h2>Understanding Mortgages</h2>
+    <p><strong>Mortgage:</strong> A mortgage is a loan specifically for buying a home. It allows you to borrow money from a lender to purchase a property and then repay it over many years. </p>
+    <p><strong>Down Payment:</strong> This is the initial amount you pay upfront when purchasing a home. A larger down payment reduces the amount you need to borrow and can lower your monthly payments and interest costs. Many lenders require at least a 5-20% down payment.</p>
+    <button class="button button-fill-ios" onclick="displayInstructionsStage3()">Next</button>
+`;
+}
+
+function displayInstructionsStage3(){
+    // Check if #welcomeMessage exists
+    const welcomeMessageDiv = document.querySelector('#welcomeMessage3');
+    if (!welcomeMessageDiv) {
+        console.error('welcomeMessage div not found');
+        return;
+}
+
+// Update content within #welcomeMessage
+welcomeMessageDiv.innerHTML = `
+    <p> As you embark on this significant financial milestone, you’ll face critical decisions that will shape your future. Each scenario will test your understanding of mortgages and how they fit into your long-term financial strategy. Choose wisely, as these decisions will impact your monthly budget, equity, and overall financial health. Let’s dive into the world of homeownership and explore the possibilities that lie ahead! </p>
+
+    <button class="button button-fill-ios" onclick="startStage3()">Start </button>
+`;
+}
+
+ function startStage3(){
+     document.getElementById('welcome-box3').style.display = 'none';
+     document.getElementById('stage3questions').style.display = 'block';
+
+ }
+
+ function HelpButtonFunction() {
+    document.getElementById('helpPage').style.display = 'block';
+}
+
+function closeHelpPage() {
+    document.getElementById('helpPage').style.display = 'none';
+}

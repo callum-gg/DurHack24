@@ -236,6 +236,8 @@ button {
     font-weight: bold;
 }
 
+
+
 /* For the welcome box on stage 1*/ 
 .page-content {
     background-color: #06402b;
@@ -393,110 +395,3 @@ button {
     text-decoration: underline;
 }
 
-/* CHAT BOX */
-
-#chatbox {
-    position: absolute;
-    bottom: -300px;
-    left: calc(50% + 70px);
-    translate: -50% 0;
-    transition: bottom 500ms ease-in-out;
-}
-#chatbox.open {
-    bottom: 0;
-}
-
-#chatbox-close {
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border: none;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background: transparent;
-}
-
-#chatbox-content {
-    height: 300px;
-    width: 200px;
-    background-color: white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid black;
-}
-
-#chatbox-messages {
-    overflow-x: hidden;
-    flex-grow: 1;
-    border-radius: 4px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.chatbox-message {
-    /* background-color: #00a8e0; */
-    background-color: #98a869;
-    border-radius: 6px;
-    padding: 4px;
-    width: 120px;
-    align-self: flex-end;
-}
-.chatbox-message.bot {
-    align-self: flex-start;
-    background-color: #999;
-}
-
-#chatbox-input {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#chatbox-text {
-    outline: none;
-    border: 1px solid black;
-    border-radius: 3px;
-    font-size: inherit;
-    width: 135px;
-    height: 18px;
-}
-
-#chatbox-send {
-    border: 1px solid black;
-    border-radius: 3px;
-    outline: none;
-    background: transparent;
-    width: 30px;
-}
-
-/* DECISIONS */
-
-.decision {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.decision-text {
-
-}
-
-.decision-option {
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 4px;
-}

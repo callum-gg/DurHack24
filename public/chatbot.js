@@ -28,10 +28,6 @@ function SendMessage() {
     inp.value = "";
 }
 
-document.getElementById("chatbox-toggle").addEventListener("click", () => {
-    document.getElementById("chatbox").classList.toggle("open");
-});
-
 document.getElementById("chatbox-text").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         SendMessage();
