@@ -1,3 +1,8 @@
+function OpenChatbox() {
+    document.getElementById('chatbox').classList.add('open');
+    // TODO: take context from current question
+}
+
 function ShowMessage(message, isBot) {
     let chatbox = document.getElementById("chatbox-messages");
     let msg = document.createElement("div");
