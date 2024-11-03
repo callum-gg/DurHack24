@@ -45,7 +45,8 @@ class Hangman {
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "You won!";
-                
+                let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
+                localStorage.setItem('creditScore', creditScore);
                 // Wait for 5 seconds, then show Stage 2 page
                 setTimeout(showStage2Page, 5000);
             }
@@ -112,6 +113,8 @@ class ImageHangman {
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "You won!";
+                let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
+                localStorage.setItem('creditScore', creditScore);
                 
                 // Wait for 5 seconds, then show Stage 3 page
                 setTimeout(showStage3Page, 5000);
