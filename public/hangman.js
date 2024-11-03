@@ -29,12 +29,13 @@ class Hangman {
         this.hangmanImg = document.createElement("img");
         this.container.appendChild(this.hangmanImg);
 
+        this.found = false;
         this.keyListener = document.addEventListener("keydown", (event) => {
             this.guess(event.key.toUpperCase());
         });
     }
     guess(letter) {
-        if (this.word.includes(letter) && this.mistakes <= 6) {
+        if (this.word.includes(letter) && this.mistakes <= 6 && !this.found) {
             for (let i = 0; i < this.word.length; i++) {
                 if (this.word[i] === letter) {
                     this.empty_word = this.empty_word.substring(0, i * 2) + letter + this.empty_word.substring(i * 2 + 1);
@@ -45,6 +46,7 @@ class Hangman {
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "+20 credit score!";
+                this.found = true;
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
                 localStorage.setItem('creditScore', creditScore);
                 document.getElementById('creditScore').textContent = creditScore;
@@ -59,6 +61,7 @@ class Hangman {
                 this.mistakes++;
             } else {
                 this.hintElement.innerText = "Unlucky, you didn't guess the word!";
+                this.found = true;
                 this.wordElement.innerText = this.word;
     
                 // Wait for 5 seconds, then start Stage 2
@@ -102,10 +105,12 @@ class ImageHangman {
 
         this.keyListener = document.addEventListener("keydown", (event) => {
             this.guess(event.key.toUpperCase());
+
+        this.found = false;
         });
     }
     guess(letter) {
-        if (this.word.includes(letter) && this.mistakes <= 6) {
+        if (this.word.includes(letter) && this.mistakes <= 6 && !this.found) {
             for (let i = 0; i < this.word.length; i++) {
                 if (this.word[i] === letter) {
                     this.empty_word = this.empty_word.substring(0, i * 2) + letter + this.empty_word.substring(i * 2 + 1);
@@ -116,6 +121,7 @@ class ImageHangman {
             if (!this.empty_word.includes("_")) {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "+20 Credit Score";
+                this.found = true;
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
                 localStorage.setItem('creditScore', creditScore);
                 document.getElementById('creditScore').textContent = creditScore;
@@ -132,6 +138,7 @@ class ImageHangman {
             } else {
                 this.hintElement.innerText = "Unlucky, you didn't guess the word.";
                 this.wordElement.innerText = this.word;
+                this.found = true;
     
                 // Wait for 5 seconds, then start Stage 3
                 setTimeout(showStage3Page, 5000);
