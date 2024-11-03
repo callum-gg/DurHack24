@@ -26,7 +26,11 @@ function CreateDecision(question_id) {
                             localStorage.setItem('balance', bal);
                             localStorage.setItem('creditScore', credit);
                             document.getElementById('balanceAmount').textContent = `£${bal}`;
+                            document.getElementById('balanceAmountStage2').textContent = `£${bal}`;
+                            document.getElementById('balanceAmountStage3').textContent = `£${bal}`;
                             document.getElementById('creditScore').textContent = credit;
+                            document.getElementById('creditScoreStage2').textContent = credit;
+                            document.getElementById('creditScoreStage3').textContent = credit;
                             document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
 
                             CreateDecision(question_id + 1);
@@ -41,6 +45,9 @@ function CreateDecision(question_id) {
                                         break;
                                     case 2:
                                         document.getElementById("root").style.display = 'block';
+                                        document.getElementById("chatbox").classList.add("open");
+                                        document.getElementById("chatbox-text").value = `I earned ${credit} credit score, can you explain what this means for me?`;
+                                        SendMessage();
                                         break;
                                 }
                             }
