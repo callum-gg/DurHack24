@@ -7,17 +7,17 @@
                 "a1": {
                     "Text": "Make the whole payment right now.",
                     "Balance increment": -500,
-                    "Credit score increment": 200
+                    "Credit score increment": 100
                 },
                 "a2": {
                     "Text": "Make only the minimum payment required.",
                     "Balance increment": -50,
-                    "Credit score increment": 50
+                    "Credit score increment": 30
                 },
                 "a3": {
                     "Text": "Make a partial payment that's less than the minimum.",
                     "Balance increment": -25, 
-                    "Credit score increment": -50
+                    "Credit score increment": -30
                 }
             }
         },
@@ -28,12 +28,12 @@
                 "a4": {
                     "Text": "Charge the item to your credit card.",
                     "Balance increment": 100,
-                    "Credit score increment": 50
+                    "Credit score increment": 40
                 },
                 "a5": {
                     "Text": "Skip buying the item for now.",
                     "Balance increment": 0,
-                    "Credit score increment": 30
+                    "Credit score increment": 20
                 }
             }
         },
@@ -44,12 +44,12 @@
                 "a6": {
                     "Text": "Accept the offer to increase your credit limit.",
                     "Balance increment": 0,
-                    "Credit score increment": 100
+                    "Credit score increment": 50
                 },
                 "a7": {
                     "Text": "Decline the offer and keep your current limit.",
                     "Balance increment": 0,
-                    "Credit score increment": 50
+                    "Credit score increment": 25
                 }
             }
         },
@@ -60,12 +60,12 @@
                 "a8": {
                     "Text": "Take the challenge and spend £500 for bonus rewards points.",
                     "Balance increment": 500,
-                    "Credit score increment": -50
+                    "Credit score increment": -25
                 },
                 "a9": {
                     "Text": "Skip the challenge and avoid the additional spending.",
                     "Balance increment": 0,
-                    "Credit score increment": 50
+                    "Credit score increment": 25
                 }
             }
         }
@@ -78,17 +78,17 @@
                 "a10": {
                     "Text": "Cover the expense by charging it to your credit card.",
                     "Balance increment": 500,
-                    "Credit score increment": 100
+                    "Credit score increment": 50
                 },
                 "a11": {
                     "Text": "Pay for the expense using your savings.",
                     "Balance increment": -50,
-                    "Credit score increment": 50
+                    "Credit score increment": 25
                 },
                 "a12": {
                     "Text": "Arrange a payment plan to cover the expense over time.",
                     "Balance increment": 25, 
-                    "Credit score increment": -50
+                    "Credit score increment": -25
                 }
             }
         },
@@ -99,12 +99,12 @@
                 "a13": {
                     "Text": "Use the extra income to increase your monthly credit payments.",
                     "Balance increment": 0,
-                    "Credit score increment": 150
+                    "Credit score increment": 75
                 },
                 "a14": {
                     "Text": "Save the extra income for future expenses.",
                     "Balance increment": 0,
-                    "Credit score increment": 50
+                    "Credit score increment": 25
                 },
                 "a15": {
                     "Text": "Spend the extra income on something special for yourself.",
@@ -120,12 +120,12 @@
                 "a16": {
                     "Text": "Transfer your balance to take advantage of the lower interest rate.",
                     "Balance increment": 0,
-                    "Credit score increment": 100
+                    "Credit score increment": 60
                 },
                 "a17": {
                     "Text": "Stick with your current credit card and interest rate.",
                     "Balance increment": 0,
-                    "Credit score increment": 30
+                    "Credit score increment": 20
                 }
             }
         },
@@ -136,7 +136,7 @@
                 "a18": {
                     "Text": "Apply for the new rewards card.",
                     "Balance increment": 0,
-                    "Credit score increment": 100
+                    "Credit score increment": 50
                 },
                 "a19": {
                     "Text": "Keep your current credit card setup.",
@@ -154,12 +154,12 @@
                 "a20": {
                     "Text": "Choose a fixed-rate mortgage for stable payments.",
                     "Balance increment": -500,
-                    "Credit score increment": 150
+                    "Credit score increment": 75
                 },
                 "a21": {
                     "Text": "Choose an adjustable-rate mortgage (ARM) with variable payments.",
                     "Balance increment": -100,
-                    "Credit score increment": 100
+                    "Credit score increment": 50
                 }
             }
         },
@@ -170,17 +170,17 @@
                 "a22": {
                     "Text": "Make a traditional 20% down payment.",
                     "Balance increment": 100,
-                    "Credit score increment": 150
+                    "Credit score increment": 75
                 },
                 "a23": {
                     "Text": "Make a smaller, 5% down payment.",
                     "Balance increment": 25,
-                    "Credit score increment": 60
+                    "Credit score increment": 40
                 },
                 "a24": {
                     "Text": "Make a larger 30% down payment for reduced debt.",
                     "Balance increment": 150,
-                    "Credit score increment": 200
+                    "Credit score increment": 100
                 }
             }
         },
@@ -191,7 +191,7 @@
                 "a25": {
                     "Text": "Refinance your mortgage to secure a lower interest rate.",
                     "Balance increment": 0,
-                    "Credit score increment": 150
+                    "Credit score increment": 75
                 },
                 "a26": {
                     "Text": "Stay with your current mortgage terms.",

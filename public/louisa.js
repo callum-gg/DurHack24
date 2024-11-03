@@ -153,7 +153,7 @@ function displayInstructionsStage1(){
 // Update content within #welcomeMessage
 welcomeMessageDiv.innerHTML = `
     <h2>The rules </h2>
-    <p> Starting with a credit balance of £500 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let's see how you handle your newfound financial responsibility!</p>
+    <p> Starting with a credit balance of £500 and a credit score of 200, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let's see how you handle your newfound financial responsibility!</p>
     <p> If you ever have any questions, please use the button on the bottom right corner to ask our chat-bot any questions. Good luck!</p>
     <button class="button button-fill-ios" onclick="startStage1()">Start </button>
 `;
