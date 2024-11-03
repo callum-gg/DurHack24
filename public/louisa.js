@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('profileName', name);
             localStorage.setItem('profileAvatar', selectedAvatar);
 
-            // Initialize balance and credit score if they don’t already exist
+            // Initialize balance and credit score if they don't already exist
             if (!localStorage.getItem('balance')) {
                 localStorage.setItem('balance', '500');
             }
@@ -150,7 +150,7 @@ function displayInstructionsStage1(){
 // Update content within #welcomeMessage
 welcomeMessageDiv.innerHTML = `
     <h2>The rules </h2>
-    <p> Starting with a credit balance of £500 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let’s see how you handle your newfound financial responsibility!</p>
+    <p> Starting with a credit balance of £500 and a credit score of 0, you now have the opportunity to manage your finances and build your credit history. As you navigate through various decisions, consider how each choice impacts your credit score and overall financial health. Remember, every decision you make could unlock new perks or present challenges along the way. Let's see how you handle your newfound financial responsibility!</p>
     <p> If you ever have any questions, please use the button on the bottom right corner to ask our chat-bot any questions. Good luck!</p>
     <button class="button button-fill-ios" onclick="startStage1()">Start </button>
 `;
@@ -195,7 +195,7 @@ function displayInstructionsStage3(){
 
     // Update content within #welcomeMessage
     welcomeMessageDiv.innerHTML = `
-        <p> As you embark on this significant financial milestone, you’ll face critical decisions that will shape your future. Each scenario will test your understanding of mortgages and how they fit into your long-term financial strategy. Choose wisely, as these decisions will impact your monthly budget, equity, and overall financial health. Let’s dive into the world of homeownership and explore the possibilities that lie ahead! </p>
+        <p> As you embark on this significant financial milestone, you'll face critical decisions that will shape your future. Each scenario will test your understanding of mortgages and how they fit into your long-term financial strategy. Choose wisely, as these decisions will impact your monthly budget, equity, and overall financial health. Let's dive into the world of homeownership and explore the possibilities that lie ahead! </p>
 
         <button class="button button-fill-ios" onclick="startStage3()">Start </button>
     `;
