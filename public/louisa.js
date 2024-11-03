@@ -189,14 +189,14 @@ function displayInstructionsStage3(){
     if (!welcomeMessageDiv) {
         console.error('welcomeMessage div not found');
         return;
-}
+    }
 
-// Update content within #welcomeMessage
-welcomeMessageDiv.innerHTML = `
-    <p> As you embark on this significant financial milestone, you’ll face critical decisions that will shape your future. Each scenario will test your understanding of mortgages and how they fit into your long-term financial strategy. Choose wisely, as these decisions will impact your monthly budget, equity, and overall financial health. Let’s dive into the world of homeownership and explore the possibilities that lie ahead! </p>
+    // Update content within #welcomeMessage
+    welcomeMessageDiv.innerHTML = `
+        <p> As you embark on this significant financial milestone, you’ll face critical decisions that will shape your future. Each scenario will test your understanding of mortgages and how they fit into your long-term financial strategy. Choose wisely, as these decisions will impact your monthly budget, equity, and overall financial health. Let’s dive into the world of homeownership and explore the possibilities that lie ahead! </p>
 
-    <button class="button button-fill-ios" onclick="startStage3()">Start </button>
-`;
+        <button class="button button-fill-ios" onclick="startStage3()">Start </button>
+    `;
 }
 
  function startStage3(){
