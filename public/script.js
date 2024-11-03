@@ -22,7 +22,7 @@ function CreateDecision(question_id) {
                         button.addEventListener("click", () => {
                             // TODO: integrate with flow chart
                             // TODO: update credit score, money, etc.
-                            // document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
+                            document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
                             CreateDecision(question_id + 1);
                             if (index === data[stage].length - 1) {
                                 switch (stage) {
