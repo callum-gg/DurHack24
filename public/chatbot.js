@@ -1,7 +1,11 @@
 function OpenChatbox() {
     document.getElementById('chatbox').classList.add('open');
-    document.getElementById("chatbox-text").value = `Can I get some help with this current question number ${q_id}`;
-    SendMessage();
+    if (document.getElementById("stage1questions").style.display === 'block' ||
+        document.getElementById("stage2questions").style.display === 'block' ||
+        document.getElementById("stage3questions").style.display === 'block') {
+        document.getElementById("chatbox-text").value = `Can I get some help with this current question number ${q_id}`;
+        SendMessage();
+    }
 }
 
 function ShowMessage(message, isBot) {
