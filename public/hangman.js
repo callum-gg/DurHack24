@@ -57,7 +57,7 @@ class Hangman {
                 this.wordElement.innerText = this.word;
     
                 // Wait for 5 seconds, then start Stage 2
-                setTimeout(startStage2, 5000);
+                setTimeout(showStage2Page, 5000);
             }
         }
     }
@@ -67,20 +67,21 @@ class ImageHangman {
     constructor(word, image, hint) {
         this.word = word.toUpperCase();
         this.empty_word = "_ ".repeat(word.length);
-        this.description = description;
+        this.image = image;
         this.hint = hint;
         this.mistakes = 0;
 
-        // Set the container to be the stage1hangman div
+        // Set the container to be the stage2hangman div
         this.container = document.getElementById("stage2hangman");
         this.container.style.display = "block"; // Make sure it's visible
 
         // Clear any previous content inside the container
         this.container.innerHTML = "";
 
-        this.descriptionElement = document.createElement("p");
-        this.descriptionElement.innerText = this.description;
-        this.container.appendChild(this.descriptionElement);
+        this.imageElement = document.createElement("img");
+        this.imageElement.src = this.image;
+        this.imageElement.width = 100;
+        this.container.appendChild(this.imageElement);
 
         this.wordElement = document.createElement("p");
         this.wordElement.innerText = this.empty_word;
@@ -110,8 +111,8 @@ class ImageHangman {
                 document.removeEventListener("keydown", this.keyListener);
                 this.hintElement.innerText = "You won!";
                 
-                // Wait for 5 seconds, then show Stage 2 page
-                setTimeout(showStage2Page, 5000);
+                // Wait for 5 seconds, then show Stage 3 page
+                setTimeout(showStage3Page, 5000);
             }
         } else if (/[A-Z]/.test(letter) && letter.length === 1 && this.empty_word.includes("_")) {
             if (this.mistakes < 6) {
@@ -121,8 +122,8 @@ class ImageHangman {
                 this.hintElement.innerText = "You lost!";
                 this.wordElement.innerText = this.word;
     
-                // Wait for 5 seconds, then start Stage 2
-                setTimeout(startStage3, 5000);
+                // Wait for 5 seconds, then start Stage 3
+                setTimeout(showStage3Page, 5000);
             }
         }
     }

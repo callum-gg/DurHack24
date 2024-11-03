@@ -189,26 +189,26 @@ function startStage2(){
 
 }
 
-function startStage1b(){
-    const hangman1 = new Hangman(
+function startStage2b(){
+    const hangman1 = new ImageHangman(
         "Credit score",
         "img/hangman2-2.png",
         "Influences your loan approvals and interest rates."
     );
-    const hangman2 = new Hangman(
+    const hangman2 = new ImageHangman(
         "Savings",
         "img/hangman2-3.png",
         "Money set aside for future use."
     ); 
-    const hangman3 = new Hangman(
+    const hangman3 = new ImageHangman(
         "Digital banking",
         "img/hangman2-1.png",
         "Makes banking easier and more convenient."
     );
     hangmans = [hangman1, hangman2, hangman3]
     hangman = hangmans[Math.floor(Math.random() * 3)];
-    document.getElementById('stage1questions').style.display = 'none';
-    document.getElementById('stage1hangman').style.display = 'block';
+    document.getElementById('stage2questions').style.display = 'none';
+    document.getElementById('stage2hangman').style.display = 'block';
 
 }
 
