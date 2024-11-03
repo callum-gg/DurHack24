@@ -167,23 +167,20 @@ function startStage1(){
 }
 
 function startStage1b(){
-    const hangman1 = new Hangman(
-        "Credit",
+    hangmans = [
+        ["Credit",
         "The opposite of debit, this type of card allows you to borrow money to make purchases.",
-        "It's what you signed up for at the beginning of this game!"
-    );
-    const hangman2 = new Hangman(
-        "Minimum",
+        "It's what you signed up for at the beginning of this game!"],
+        ["Minimum",
         "This term describes paying the same amount every month to reduce a loan or credit card balance.",
-        "It's the smallest amount you're required to pay each month."
-    ); 
-    const hangman3 = new Hangman(
-        "Grace Period",
+        "It's the smallest amount you're required to pay each month."],
+        ["Grace Period",
         "What refers to a period when no interest is charged on purchases, provided you pay off your balance before the due date?",
-        "This period helps you avoid interest charges on purchases."
-    );
-    hangmans = [hangman1, hangman2, hangman3]
-    hangman = hangmans[Math.floor(Math.random() * 3)];
+        "This period helps you avoid interest charges on purchases."]
+    ]
+    i = Math.floor(Math.random() * 3)
+    console.log(i)
+    hangman = new Hangman(hangmans[i][0], hangmans[i][1], hangmans[i][2]);
     document.getElementById('stage1questions').style.display = 'none';
     document.getElementById('stage1hangman').style.display = 'block';
     document.getElementById('stage1hangman').classList.add('fade-in');
@@ -198,6 +195,20 @@ function startStage2(){
 }
 
 function startStage2b(){
+    // hangmans = [
+    //     ["Credit score",
+    //     "img/hangman2-2.png",
+    //     "Influences your loan approvals and interest rates."],
+    //     ["Savings",
+    //     "img/hangman2-3.png",
+    //     "Money set aside for future use."],
+    //     ["Digital banking",
+    //     "img/hangman2-1.png",
+    //     "Makes banking easier and more convenient."]
+    // ]
+    // i = Math.floor(Math.random() * 3)
+    // console.log(i)
+    // hangman = new Hangman(hangmans[i][0], hangmans[i][1], hangmans[i][2]);
     const hangman1 = new ImageHangman(
         "Credit score",
         "img/hangman2-2.png",
