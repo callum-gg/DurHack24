@@ -47,6 +47,9 @@ class Hangman {
                 this.hintElement.innerText = "+20 credit score!";
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0') + 20));
                 localStorage.setItem('creditScore', creditScore);
+                document.getElementById('creditScore').textContent = creditScore;
+                document.getElementById('creditScoreStage2').textContent = creditScore;
+                document.getElementById('creditScoreStage3').textContent = creditScore;
                 // Wait for 5 seconds, then show Stage 2 page
                 setTimeout(showStage2Page, 5000);
             }
@@ -115,6 +118,9 @@ class ImageHangman {
                 this.hintElement.innerText = "+20 Credit Score";
                 let creditScore = String(Number(localStorage.getItem('creditScore', '0')) + 20);
                 localStorage.setItem('creditScore', creditScore);
+                document.getElementById('creditScore').textContent = creditScore;
+                document.getElementById('creditScoreStage2').textContent = creditScore;
+                document.getElementById('creditScoreStage3').textContent = creditScore;
                 
                 // Wait for 5 seconds, then show Stage 3 page
                 setTimeout(showStage3Page, 5000);
