@@ -1,5 +1,4 @@
 function CreateDecision(question_id) {
-    console.log(question_id);
     fetch('questions.json')
     .then(response => response.json())
     .then(data => {
@@ -7,7 +6,6 @@ function CreateDecision(question_id) {
             for (let index=0; index<data[stage].length; index++) {
                 let question = data[stage][index];
                 if (question.questionID === `q${question_id}`) {
-                    console.log("found question", stage)
                     let container = document.createElement("div");
                     container.classList.add("decision");
                     document.getElementById(`stage${stage + 1}questions`).appendChild(container);
@@ -24,10 +22,9 @@ function CreateDecision(question_id) {
                         button.addEventListener("click", () => {
                             // TODO: integrate with flow chart
                             // TODO: update credit score, money, etc.
-                            document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
+                            // document.getElementById(`stage${stage + 1}questions`).innerHTML = '';
                             CreateDecision(question_id + 1);
                             if (index === data[stage].length - 1) {
-                                console.log(stage);
                                 switch (stage) {
                                     case 0:
                                         showStage2Page();

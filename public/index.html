@@ -154,44 +154,45 @@
 
             <!-- Stage3 Page---------------------------------------------- -->
             <div class="page" id="stage3Page" style="display: none;">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- Left side: avatar image and name -->
-                    <div class="left" id="avatarInfoStage3">
-                        <img id="selectedAvatarImgStage3" class="navbar-avatar" src="" alt="Avatar">
-                        <span id="userNameStage3" class></span>
-                    </div>
-
-                    <!-- Right side: credit card image and credit info -->
-                    <div class="right">
-                        <div id="balanceCreditInfoStage3">
-                            <p>Balance: <span id="balanceAmountStage3"></span></p>
-                            <p>Credit Score: <span id="creditScoreStage3"></span></p>
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- Left side: avatar image and name -->
+                        <div class="left" id="avatarInfoStage3">
+                            <img id="selectedAvatarImgStage3" class="navbar-avatar" src="" alt="Avatar">
+                            <span id="userNameStage3" class></span>
                         </div>
-                        <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+
+                        <!-- Right side: credit card image and credit info -->
+                        <div class="right">
+                            <div id="balanceCreditInfoStage3">
+                                <p>Balance: <span id="balanceAmountStage3"></span></p>
+                                <p>Credit Score: <span id="creditScoreStage3"></span></p>
+                            </div>
+                            <img src="img/credit-card-logo.png" alt="Logo" class="navbar-logo">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="page-content">
-                <div id="welcome-box3" class="welcome-box" style="display: block;">
-                    <div class="welcome-box-content">
-                        <div id="welcomeMessage3">
-                            <p>You’ve demonstrated impressive financial responsibility and achieved a high credit score, unlocking this next exciting phase of your journey—mortgaging your dream home. Before we begin, here are some definitions of important key terms to know when dealing with mortgages!</p>
-                            <img src="img/house.png" alt="House Image" id="house-image">
+                <div class="page-content">
+                    <div id="welcome-box3" class="welcome-box" style="display: block;">
+                        <div class="welcome-box-content">
+                            <div id="welcomeMessage3">
+                                <p>You’ve demonstrated impressive financial responsibility and achieved a high credit score, unlocking this next exciting phase of your journey—mortgaging your dream home. Before we begin, here are some definitions of important key terms to know when dealing with mortgages!</p>
+                                <img src="img/house.png" alt="House Image" id="house-image">
 
-                        <button class="button button-fill-ios" onclick="displayMoreContentStage3()">Next</button>
+                            <button class="button button-fill-ios" onclick="displayMoreContentStage3()">Next</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="stage3questions" class = "stage3questions" style="display:none; padding-top: 15px;"></div>
+                <div id="stage3questions" class = "stage3questions" style="display:none; padding-top: 15px;"></div>
+                    
+                <div class="bottom-left-button">
+                    <button onclick="HelpButtonFunction()"></button>
+                </div>
                 
-            <div class="bottom-left-button">
-                <button onclick="HelpButtonFunction()"></button>
-            </div>
-            
-            <div class="bottom-right-button">
-                <button onclick="document.getElementById('chatbox').classList.add('open')"></button>
+                <div class="bottom-right-button">
+                    <button onclick="document.getElementById('chatbox').classList.add('open')"></button>
+                </div>
             </div>
          </div>
 

@@ -342,6 +342,7 @@ button {
     font-size: 20px;
     font-weight: bold;
     padding: 10px; /* Add padding around the help page content */
+    z-index: 9999;
 }
 
 #helpPage .button.button-fill-ios {
@@ -401,6 +402,7 @@ button {
     left: calc(50% + 70px);
     translate: -50% 0;
     transition: bottom 500ms ease-in-out;
+    z-index: 9999;
 }
 #chatbox.open {
     bottom: 0;
