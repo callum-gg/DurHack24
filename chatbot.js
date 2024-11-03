@@ -56,11 +56,28 @@ async function SendMessage(content) {
         });
         messages = await messages.json();
         if (messages.messages[0].id !== msg.message.id) {
-            bot_response = messages.messages[0]
+            switch (messages.messages[0].payload.type) {
+                case 'text':
+                    bot_response = messages.messages[0].payload.text
+                    break;
+                case 'choice':
+                    bot_response = '';
+                    for (let i=0; i<messages.messages[0].payload.options.length; i++) {
+                        bot_response += `${i+1}. ${messages.messages[0].payload.options[i].label}\n`;
+                    }
+                    break;
+                case 'carousel':
+                    bot_response = '';
+                    for (let i=0; i<messages.messages[0].payload.actions.length; i++) {
+                        bot_response += `${i+1}. ${messages.messages[0].payload.actions[i].label}\n`;
+                    }
+                    break;
+                default:
+                    bot_response = 'Sorry, I couldn\'t help with that request';
+            }
         }
     }
-    // TODO: Handle other types of messages
-    return bot_response.payload.text;
+    return bot_response;
 }
 
 module.exports = {
