@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name
-        document.getElementById('selectedAvatarImg').src = `img/Mii£{avatar}.jpg`;
+        document.getElementById('selectedAvatarImg').src = `img/Mii${avatar}.jpg`;
         document.getElementById('userName').textContent = name;
 
         // Update balance and credit score
-        document.getElementById('balanceAmount').textContent = `££{balance}`;
+        document.getElementById('balanceAmount').textContent = `£${balance}`;
         document.getElementById('creditScore').textContent = creditScore;
     }
 
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name for Stage 2
-        document.getElementById('selectedAvatarImgStage2').src = `img/Mii£{avatar}.jpg`;
+        document.getElementById('selectedAvatarImgStage2').src = `img/Mii${avatar}.jpg`;
         document.getElementById('userNameStage2').textContent = name;
 
         // Update balance and credit score for Stage 2
-        document.getElementById('balanceAmountStage2').textContent = `££{balance}`;
+        document.getElementById('balanceAmountStage2').textContent = `£${balance}`;
         document.getElementById('creditScoreStage2').textContent = creditScore;
     }
 
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const creditScore = localStorage.getItem('creditScore');
 
         // Update avatar image and name for Stage 3
-        document.getElementById('selectedAvatarImgStage3').src = `img/Mii£{avatar}.jpg`;
+        document.getElementById('selectedAvatarImgStage3').src = `img/Mii${avatar}.jpg`;
         document.getElementById('userNameStage3').textContent = name;
 
         // Update balance and credit score for Stage 3
-        document.getElementById('balanceAmountStage3').textContent = `££{balance}`;
+        document.getElementById('balanceAmountStage3').textContent = `£${balance}`;
         document.getElementById('creditScoreStage3').textContent = creditScore;
     }
 
