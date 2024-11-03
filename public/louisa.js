@@ -216,7 +216,7 @@ function displayMoreContentStage3() {
     // Check if #welcomeMessage exists
     const welcomeMessageDiv = document.querySelector('#welcomeMessage3');
     if (!welcomeMessageDiv) {
-        console.error('welcomeMessage div not found');
+        console.error('welcomeMessage div not found!');
         return;
 }
 
