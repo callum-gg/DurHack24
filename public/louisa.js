@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('creditScore', '0');
             }
 
+            document.getElementById('userNameMessage').innerText = name;
+
             showStage1Page(); // Show stage1 page after saving
         } else {
             app.dialog.alert('Please select an avatar and enter a name.');
