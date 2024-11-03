@@ -1,3 +1,4 @@
+let q_id
 function CreateDecision(question_id) {
     fetch('questions.json')
     .then(response => response.json())
@@ -6,6 +7,7 @@ function CreateDecision(question_id) {
             for (let index = 0; index < data[stage].length; index++) {
                 let question = data[stage][index];
                 if (question.questionID === `q${question_id}`) {
+                    q_id = question_id
                     let container = document.createElement("div");
                     container.classList.add("decision");
                     document.getElementById(`stage${stage + 1}questions`).appendChild(container);

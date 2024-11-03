@@ -1,6 +1,7 @@
 function OpenChatbox() {
     document.getElementById('chatbox').classList.add('open');
-    // TODO: take context from current question
+    document.getElementById("chatbox-text").value = `Can I get some help with this current question number ${q_id}`;
+    SendMessage();
 }
 
 function ShowMessage(message, isBot) {
